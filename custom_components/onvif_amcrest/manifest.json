@@ -8,5 +8,7 @@
   "documentation": "https://www.home-assistant.io/integrations/onvif",
   "iot_class": "local_push",
   "loggers": ["onvif", "wsdiscovery", "zeep"],
-  "requirements": ["onvif-zeep-async==3.1.12", "WSDiscovery==2.0.0"]
+  "integration_type": "device",
+  "requirements": ["onvif-zeep-async==3.1.12", "WSDiscovery==2.0.0"],
+  "version": "0.1.0"
 }
