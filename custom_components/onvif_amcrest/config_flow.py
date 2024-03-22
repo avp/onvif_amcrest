@@ -26,6 +26,7 @@ from homeassistant.config_entries import (
     ConfigEntry,
     ConfigEntryState,
     ConfigFlow,
+    ConfigFlowResult,
     OptionsFlow,
 )
 from homeassistant.const import (
@@ -131,7 +132,7 @@ class OnvifFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth(
         self, entry_data: Mapping[str, Any]
-    ):
+    ) -> ConfigFlowResult:
         """Handle re-authentication of an existing config entry."""
         reauth_entry = self.hass.config_entries.async_get_entry(
             self.context["entry_id"]
@@ -142,7 +143,7 @@ class OnvifFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth_confirm(
         self, user_input: dict[str, Any] | None = None
-    ):
+    ) -> ConfigFlowResult:
         """Confirm reauth."""
         entry = self._reauth_entry
         errors: dict[str, str] | None = {}
@@ -171,7 +172,7 @@ class OnvifFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_dhcp(
         self, discovery_info: dhcp.DhcpServiceInfo
-    ):
+    ) -> ConfigFlowResult:
         """Handle dhcp discovery."""
         hass = self.hass
         mac = discovery_info.macaddress
@@ -245,7 +246,7 @@ class OnvifFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_configure(
         self, user_input: dict[str, Any] | None = None
-    ):
+    ) -> ConfigFlowResult:
         """Device configuration."""
         errors: dict[str, str] = {}
         description_placeholders: dict[str, str] = {}

@@ -8,7 +8,7 @@ from zeep.exceptions import Fault, TransportError
 
 LOGGER = logging.getLogger(__package__)
 
-DOMAIN = "onvif_amcrest"
+DOMAIN = "onvif"
 
 DEFAULT_PORT = 80
 DEFAULT_ARGUMENTS = "-pred 1"
