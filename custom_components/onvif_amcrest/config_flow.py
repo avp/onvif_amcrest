@@ -22,13 +22,12 @@ from homeassistant.components.stream import (
     CONF_USE_WALLCLOCK_AS_TIMESTAMPS,
     RTSP_TRANSPORTS,
 )
-from homeassistant.config_entries import (
-    ConfigEntry,
-    ConfigEntryState,
-    ConfigFlow,
-    ConfigFlowResult,
-    OptionsFlow,
-)
+from homeassistant import config_entries
+ConfigEntry = config_entries.ConfigEntry,
+ConfigEntryState = config_entries.ConfigEntryState,
+ConfigFlow = config_entries.ConfigFlow,
+ConfigFlowResult = config_entries.ConfigFlowResult,
+OptionsFlow = config_entries.OptionsFlow,
 from homeassistant.const import (
     CONF_HOST,
     CONF_NAME,
