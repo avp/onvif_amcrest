@@ -1,7 +1,7 @@
 {
   "version": 1.0,
-  "domain": "onvif",
-  "name": "ONVIF",
+  "domain": "onvif_amcrest",
+  "name": "ONVIF AMCREST",
   "codeowners": ["@hunterjm"],
   "config_flow": true,
   "dependencies": ["ffmpeg"],
