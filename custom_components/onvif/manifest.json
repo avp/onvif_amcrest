@@ -1,7 +1,7 @@
 {
-  "domain": "onvif_amcrest",
+  "domain": "onvif",
   "name": "ONVIF",
-  "codeowners": ["@hunterjm", "@avp"],
+  "codeowners": ["@hunterjm"],
   "config_flow": true,
   "dependencies": ["ffmpeg"],
   "dhcp": [{ "registered_devices": true }],
